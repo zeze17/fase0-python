@@ -5,7 +5,7 @@ from fase0_python.clases.equipo_proteccion import EquipoProteccion
 def test_obtener_nombre():
     usuario = Usuario("Carlos", 25, "Operario")
 
-    assert usuario.obtener_nombre() == "Carlos"
+    assert usuario.nombre == "Carlos"
 
 
 def test_usuario_mayor_edad():
@@ -21,12 +21,12 @@ def test_usuario_menor_edad():
 
 
 def test_equipo_disponible():
-    casco = EquipoProteccion("Casco", "Disponible")
+    casco = EquipoProteccion("Casco", True)
 
-    assert casco.esta_disponible() == True
+    assert casco.estado == True
 
 
 def test_equipo_no_disponible():
-    guantes = EquipoProteccion("Guantes", "En mantenimiento")
+    guantes = EquipoProteccion("Guantes", False)
 
-    assert guantes.esta_disponible() == False
+    assert guantes.estado == False

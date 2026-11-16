@@ -174,3 +174,76 @@ numeros = [10, 20, 30, 40, 50]
 print("Longitud:", len(numeros))
 print("Redondeo:", round(3.14159, 2))
 
+
+#estructuras de datos
+frutas = ["Manzanas", "Pera", "Platano"]
+print(frutas)
+print(len(frutas))
+
+frutas.append("Guanabara")
+print(frutas)
+#frutas.insert(0, "fresa")
+frutas.remove("Platano")
+print(frutas)
+
+frutas.pop()
+
+usuario = {
+    "nombre": "Elena",
+    "edad": 28,
+    "es_activo": True,
+    "hobbies": ["leer", "viajar"]
+}
+print(usuario["nombre"])
+print(usuario.get("edad"))
+usuario["email"] = "elena@email.com"
+usuario["edad"] = 29
+
+print(usuario.keys())
+print(usuario.values())
+print(usuario.items())
+
+
+# Crear una tupla (usa paréntesis)
+coordenadas = (40.4168, -3.7038)
+
+# Acceder a los elementos (igual que en las listas)
+print(coordenadas[0])  # 40.4168
+
+# ¡Esto daría un ERROR! Las tuplas no se pueden modificar:
+#coordenadas[0] = 30.0
+
+coordenadas1 = (40.4168, -3.7038)
+coordenadas2 = (4.6097, -74.0817)
+coordenadas3 = (6.2442, -75.5812)
+
+print(coordenadas1)
+print(coordenadas2)
+print(coordenadas3)
+
+coordenadas = [
+    (40.4168, -3.7038),
+    (4.6097, -74.0817),
+    (6.2442, -75.5812)
+]
+
+print(coordenadas[0])     # Primera tupla
+print(coordenadas[1])     # Segunda tupla
+print(coordenadas[0][0])  # Primera latitud
+print(coordenadas[0][1])  # Primera longitud
+
+
+# Crear un set (usa llaves o la función set())
+colores = {"rojo", "verde", "azul", "rojo"}
+print(colores)  # Imprimirá algo como {'azul', 'rojo', 'verde'} (el "rojo" duplicado desaparece)
+
+# Añadir y eliminar elementos
+colores.add("amarillo")
+colores.remove("verde")
+
+# Operaciones de conjuntos
+conjunto_a = {1, 2, 3}
+conjunto_b = {3, 4, 5}
+
+print(conjunto_a.union(conjunto_b))          # {1, 2, 3, 4, 5}
+print(conjunto_a.intersection(conjunto_b))   # {3} (elementos que están en ambos)
